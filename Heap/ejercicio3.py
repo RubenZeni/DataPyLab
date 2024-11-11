@@ -1,6 +1,6 @@
 from heap import HeapMax, HeapMin
 
-#personajes de MCU: nombre, superhéroe, género
+# Personajes de MCU: nombre, superhéroe, género
 personajes_ucm = [
     {"nombre": "Tony Stark", "heroe": "Iron Man", "genero": "M"},
     {"nombre": "Steve Rogers", "heroe": "Capitán América", "genero": "M"},
@@ -17,22 +17,21 @@ heap_min = HeapMin()
 for personaje in personajes_ucm:
     heap_min.arribo(personaje, ord(personaje["nombre"][0]))
 
-
-#A. Determinar el nombre del personaje de la superhéroe Capitana Marvel
+# A. Determinar el nombre del personaje de la superhéroe Capitana Marvel
 print("A.")
 print("Personaje de Capitana Marvel:", heap_min.encontrar_personaje_por_heroe(heap_min, "Capitana Marvel"))
 
-#B. Mostrar los nombres de los superhéroes femeninos
+# B. Mostrar los nombres de los superhéroes femeninos
 print("\nB.")
 print("Superhéroes femeninos:")
 heap_min.mostrar_superheroes_femeninos(heap_min)
 
-#C. Mostrar los nombres de los personajes masculinos
+# C. Mostrar los nombres de los personajes masculinos
 print("\nC.")
 print("Personajes masculinos:")
 heap_min.mostrar_personajes_masculinos(heap_min)
 
-#D. Determinar el nombre del superhéroe del personaje Scott Lang
+# D. Determinar el nombre del superhéroe del personaje Scott Lang
 print("\nD.")
 print("Superhéroe de Scott Lang:", heap_min.encontrar_heroe_por_personaje(heap_min, "Scott Lang"))
 
